@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&family=Playfair+Display:ital,wght@1,500&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(217, 218, 219);
+    opacity: 100;
+}
+
+html {
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.title1 {
+    display: block;
+    font-size: rem;
+    font-weight: 300;
+    color: #141A46;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.title2 {
+    display: block;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #EC8B5E;
+}
+
+
+/* first section */
+
+#First {
+    background-image: url(./images/CE1CF91D-FCBF-4714-8DE3-1DC9D0D5F88B_1_105_c.jpg);
+    background-position: top center;
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+}
+
+#First::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+
+#First h1 {
+    display: black;
+    width: fit-content;
+    font-size: 2.5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#First .first {
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+.Portfolio {
+    display: inline-block;
+    padding: 5px 5px;
+    color: #EC8B5E;
+    font-style: bold;
+    background-color: transparent;
+    border: 2px solid #141A46;
+    font-size: 1rem;
+    font: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color, color;
+}
+
+#First h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#First h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#First h1:nth-child(3) {
+    animation: text 0.5s ease forwards;
+    animation-delay: 3s;
+}
+
+#First h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+
+#First h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#First h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+.Portfolio:hover {
+    color: #EC8B5E;
+    background-color: #141A46;
+    font-size: 1rem;
+    ;
+}
+
+h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #141A46;
+    font-size: 1rem;
+    ;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+
+/* keyframe start */
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: #00203FFF;
+    }
+}
+
+@keyframes text {
+    100% {
+        color: #EC8B5E;
+        ;
+    }
+}
+
+
+/* keyframe end */
+
+
+/******Project*******/
+
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 0;
+    padding: 10vh 0;
+}
+
+#projects .projects-header h1 {
+    margin-bottom: 50px;
+}
+
+#projects .projectsall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#projects .project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 40vh;
+    margin: 2.5px 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projects .info {
+    padding: 10px;
+    flex-basis: 30%;
+    height: 10%;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(68deg, #29323c 0%, #485563 100%);
+    color: white;
+}
+
+s #projects .info h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    width: 50vw;
+}
+
+#projects .info p {
+    font-weight: 300;
+}
+
+#projects .proimage img {
+    flex-basis: 50%;
+    height: 20vh;
+    overflow: hidden;
+    width: 60vw;
+}
+
+
+/******Project*******/
+
+
+/******AboutME*******/
+
+#about .about {
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    padding: 10vh 0;
+    margin-top: 0px;
+}
+
+#about .colleft {
+    width: 10vw;
+    height: 40vh;
+}
+
+#about .colright {
+    margin: 5vw;
+    width: 60vw;
+    height: 40vh;
+}
+
+#about .colright h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+}
+
+#about .colright .Portfolio {
+    margin-bottom: 1px;
+    padding: 10px 20px;
+}
+
+.colleft .proimage {
+    flex-basis: 50%;
+    height: 200px;
+    overflow: hidden;
+    width: 90vw;
+}
+
+
+/******AboutME*******/
+
+#footer {
+    background-image: linear-gradient(68deg, #29323c 0%, #485563 100%);
+}
+
+#footer .contact {
+    margin: 5px;
+}
+
+#footer .footer {
+    min-height: 60vh;
+    flex-direction: column;
+    padding-top: 5vh;
+}
+
+#footer .social {
+    display: flex;
+    margin-bottom: 5vw;
+}
+
+#footer .item {
+    height: 50px;
+    width: 50px;
+}
+
+#footer .item img {
+    height: 20px;
+    width: 20px;
+}
